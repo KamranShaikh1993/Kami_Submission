@@ -8,21 +8,16 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver import ActionChains
-
-
 import csv
 import logging
-
 import numpy as np
 import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
-
 import time
 import os
 import requests
 from io import StringIO
-
 from deep_translator import GoogleTranslator
 from datetime import datetime
 
@@ -70,8 +65,6 @@ def func_1():
     driver_s.get(notice_url)  # loading a url
     logger.info("driver_s loaded")
 
-    print('Done')
-
     #=====================
 
 
@@ -100,7 +93,6 @@ def func_1():
             for single_record in driver_s.find_elements(By.XPATH,'//*[@id="bidding"]/div[3]/div/div[3]/ul/li/div[1]'):
                 title = single_record.find_element(By.XPATH,'a[1]').text
                 name.append(title)
-                print('title :- ',title)
         except:
             logger.info("Error in name")
             pass
@@ -111,7 +103,6 @@ def func_1():
                 industry = single_record.find_element(By.XPATH,'span[1]').text
                 industry = industry.split('Industry：')[1].strip()
                 sector.append(industry)
-                print('sector :- ',industry)
         except:
             logger.info("Error in sector")
             pass
@@ -124,24 +115,20 @@ def func_1():
                 region = single_record.find_element(By.XPATH,'span[2]').text
                 region = translated = GoogleTranslator(source='auto', target='en').translate(region)
                 region_name.append(region)
-
+                
                 # State
                 state.append(region)
-
-                print('region_name :- ',region)
         except:
             logger.info("Error in region_name ")
             pass
 
         #=============================
 
-
         # Loading url page_details
         try:
             i=1
             for single_record in driver_s.find_elements(By.XPATH,'//*[@id="bidding"]/div[3]/div/div[3]/ul/li/div[1]'):
                 url = single_record.find_element(By.XPATH,'a[1]').get_attribute('href')
-            #     print(url)
                 notice_url.append(url)
 
                 page_details.get(url)
@@ -171,24 +158,14 @@ def func_1():
 
                 date_str = epublished
                 date_object = datetime.strptime(date_str, '%Y-%m-%d').date()
-            #     print(type(date_object))
-            #     print(date_object)  # printed in default format
 
                 epublished_date.append(date_object)
-
                 bid_opening_date.append(date_object)
 
                 bid_submission = notice_text.split("Deadline for Submitting Bids/Time of Bid Opening (Beijing Time):")[1].split('\n')[0] 
                 bid_submission = datetime.strptime(bid_submission, '%Y-%m-%d %H:%M').date()
-                print(bid_submission)
-                print(type(bid_submission))
                 bid_submission_end_date.append(bid_submission)
 
-            #     print(i)
-            #     print(notice_text)
-            #     print('\n')
-            #     print('======================================')
-            #     print('\n')
                 i+=1
         except:
             logger.info("Error in loading page_details")
