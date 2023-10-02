@@ -1,0 +1,29 @@
+2023-10-02 09:41:18,228 - root - INFO - Connecting path to geckodriver.exe
+2023-10-02 09:41:18,241 - selenium.webdriver.common.selenium_manager - INFO - Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-10-02 09:41:24,840 - selenium.webdriver.common.selenium_manager - INFO - Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-10-02 09:41:30,597 - selenium.webdriver.common.selenium_manager - INFO - Applicable driver not found; attempting to install with Selenium Manager (Beta)
+2023-10-02 09:41:36,902 - root - INFO - Firefox webdriver loaded
+2023-10-02 09:41:58,117 - root - INFO - driver_s loaded
+2023-10-02 09:42:09,444 - root - INFO - page_details loaded 
+2023-10-02 09:42:11,401 - root - INFO - page_details loaded 
+2023-10-02 09:42:13,390 - root - INFO - page_details loaded 
+2023-10-02 09:42:15,912 - root - INFO - page_details loaded 
+2023-10-02 09:42:17,858 - root - INFO - page_details loaded 
+2023-10-02 09:42:19,819 - root - INFO - page_details loaded 
+2023-10-02 09:42:21,824 - root - INFO - page_details loaded 
+2023-10-02 09:42:23,745 - root - INFO - page_details loaded 
+2023-10-02 09:42:25,779 - root - INFO - page_details loaded 
+2023-10-02 09:42:27,737 - root - INFO - page_details loaded 
+2023-10-02 09:42:30,375 - root - INFO - Next Page
+2023-10-02 09:42:42,166 - root - INFO - page_details loaded 
+2023-10-02 09:42:44,040 - root - INFO - page_details loaded 
+2023-10-02 09:42:46,022 - root - INFO - page_details loaded 
+2023-10-02 09:42:47,950 - root - INFO - page_details loaded 
+2023-10-02 09:42:49,870 - root - INFO - page_details loaded 
+2023-10-02 09:42:51,875 - root - INFO - page_details loaded 
+2023-10-02 09:42:53,864 - root - INFO - page_details loaded 
+2023-10-02 09:42:55,832 - root - INFO - page_details loaded 
+2023-10-02 09:42:57,821 - root - INFO - page_details loaded 
+2023-10-02 09:42:59,657 - root - INFO - page_details loaded 
+2023-10-02 09:43:01,646 - root - INFO - Next Page
+2023-10-02 09:43:18,417 - root - INFO - Creating DataFrame
